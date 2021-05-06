@@ -1,0 +1,23 @@
+[
+  {
+    "stage_id": "0",
+    "left_star": "50",
+    "right_star": "100",
+    "center_star": "150",
+    "sprite_name": "name"
+  },
+  {
+    "stage_id": "1",
+    "left_star": "70",
+    "right_star": "120",
+    "center_star": "170",
+    "sprite_name": "name"
+  },
+  {
+    "stage_id": "2",
+    "left_star": "90",
+    "right_star": "140",
+    "center_star": "190",
+    "sprite_name": "name"
+  }
+]

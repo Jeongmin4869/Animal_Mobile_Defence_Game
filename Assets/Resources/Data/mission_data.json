@@ -1,0 +1,52 @@
+﻿[
+  {
+    "id": "0",
+    "sprite_name": "star_image",
+    "mission_name": "골드 {0}개 수집하기",
+    "goal_val": "100",
+    "reward_id": "0",
+    "reward_val": "1",
+    "animal_sprite_name": "elephant",
+    "animal_name": "코끼리"
+  },
+  {
+    "id": "1",
+    "sprite_name": "star_image",
+    "mission_name": "{0}번 플레이하기",
+    "goal_val": "5",
+    "reward_id": "0",
+    "reward_val": "1",
+    "animal_sprite_name": "giraffe",
+    "animal_name": "기린"
+  },
+  {
+    "id": "2",
+    "sprite_name": "star_image",
+    "mission_name": "몬스터 {0}마리 처치",
+    "goal_val": "2",
+    "reward_id": "0",
+    "reward_val": "1",
+    "animal_sprite_name": "monkey",
+    "animal_name": "원숭이"
+  },
+  {
+    "id": "3",
+    "sprite_name": "star_image",
+    "mission_name": "보스 {0}마리 처치",
+    "goal_val": "5",
+    "reward_id": "0",
+    "reward_val": "1",
+    "animal_sprite_name": "panda",
+    "animal_name": "판다"
+  },
+  {
+    "id": "4",
+    "sprite_name": "star_image",
+    "mission_name": "개발자 소개 읽기",
+    "goal_val": "1",
+    "reward_id": "0",
+    "reward_val": "1",
+    "animal_sprite_name": "penguin",
+    "animal_name": "팽귄"
+  }
+]
