@@ -51,23 +51,23 @@ public class ClearView : MonoBehaviour
         
         stageLevel = PlayerPrefs.GetInt("StageLevel");
 
-        if (stageLevel == 1)
+        if (stageLevel == 0)
         {
             unlockStage = 2;
-            PlayerPrefs.SetInt("unlockStage",2);
+            PlayerPrefs.SetInt("unlockStage",1);
             PlayerPrefs.SetInt("Stage1Star", starCount);
             PlayerPrefs.Save();
             //별저장
         }
 
-        if (stageLevel == 2)
+        if (stageLevel == 1)
         {
-            PlayerPrefs.SetInt("unlockStage", 3);
+            PlayerPrefs.SetInt("unlockStage", 2);
             PlayerPrefs.SetInt("Stage2Star", starCount);
             PlayerPrefs.Save();
         }
 
-        if (stageLevel == 3)
+        if (stageLevel == 2)
         {
             PlayerPrefs.SetInt("Stage3Star", starCount);
             PlayerPrefs.Save();

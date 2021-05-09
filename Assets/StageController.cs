@@ -15,13 +15,13 @@ public class StageController : MonoBehaviour
     void Start()
     {
         //stage data 로드
-        DataManager.GetInstance().LoadData<StageData>("Data/stage_data"); // 오류
+        //DataManager.GetInstance().LoadData<StageData>("Data/stage_data"); // 오류
 
         //info를 로드합니다
-        //var json = PlayerPrefs.GetString("stage_info");
+        var json = PlayerPrefs.GetString("stage_info");
 
         
-        /*
+        
         if (string.IsNullOrEmpty(json)) // 저장된 파일이 없을경우 True반환
         {
             StageController.gameInfo = new GameInfo();
@@ -45,13 +45,13 @@ public class StageController : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             var listItem = this.CreateListItem();
-            
+            listItem.Init(i);
+
             //이미지 세팅 이미지는 받아오기
             //별 세팅. PlayerPrefs로 설정하기.
             //false true세팅 ..  PlayerPrefs로 설정하기.
         }
 
-        */
 
         ///밑에내용 코드들 전부 삭제하기
         //불러온 데이터에 따라 현재 버튼 상태를 다르게 줘야함.

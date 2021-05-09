@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
                 spawnCount++;
                 if (spawnCount % 3 == 0)
                 {
-                    if (maxSpqwnDelay >= 0.5f)
+                    if (maxSpqwnDelay >= 0.7f)
                     {
                         maxSpqwnDelay -= 0.1f;
                     }

@@ -26,6 +26,7 @@ public class TestUGUI : MonoBehaviour
         //만약 없으면 로드하도록
         //겟 데이타 없으면 로드??
         DataManager.GetInstance().LoadData<MissionData>("Data/mission_data");
+        DataManager.GetInstance().LoadData<StageData>("Data/stage_data");
         testUBUISetting();
         GamePlayCount = PlayerPrefs.GetInt("GamePlayCount");
     }
