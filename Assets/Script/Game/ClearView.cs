@@ -13,7 +13,6 @@ public class ClearView : MonoBehaviour
     public int coin;
 
     public int stageLevel;
-    public int unlockStage;
     public int starCount;
 
     public GameObject leftStar;
@@ -49,14 +48,12 @@ public class ClearView : MonoBehaviour
             }
         }
         
-        stageLevel = PlayerPrefs.GetInt("StageLevel");
+        stageLevel = PlayerPrefs.GetInt("StageLevel"); 
 
         if (stageLevel == 0)
         {
-            unlockStage = 2;
             PlayerPrefs.SetInt("unlockStage",1);
             PlayerPrefs.SetInt("Stage1Star", starCount);
-            PlayerPrefs.Save();
             //별저장
         }
 
@@ -64,17 +61,20 @@ public class ClearView : MonoBehaviour
         {
             PlayerPrefs.SetInt("unlockStage", 2);
             PlayerPrefs.SetInt("Stage2Star", starCount);
-            PlayerPrefs.Save();
+          
         }
 
         if (stageLevel == 2)
         {
             PlayerPrefs.SetInt("Stage3Star", starCount);
-            PlayerPrefs.Save();
+        
         }
 
+        PlayerPrefs.Save();
         //세팅 저장
         //해금하기. (json으로 저장해서, sub씬으로 갔을때 불러오도록...)
+
+        //몬스터 죽음도 저장
 
     }
 

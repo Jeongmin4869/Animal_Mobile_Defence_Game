@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             }
 
             //보스 스폰 시간
-            if (bossSpawnDelay > 30f + spawnBossCount * 10f)
+            if (bossSpawnDelay > 30f + spawnBossCount * 5f)
             {
                 spawnBoss();
                 bossSpawnDelay = 0;
