@@ -19,6 +19,8 @@ public class ClearView : MonoBehaviour
     public GameObject rightStar;
     public GameObject centerStar;
 
+    public PlaygameCount playgameCount = new PlaygameCount();
+
 
 
 
@@ -74,8 +76,13 @@ public class ClearView : MonoBehaviour
         //세팅 저장
         //해금하기. (json으로 저장해서, sub씬으로 갔을때 불러오도록...)
 
-        //몬스터 죽음도 저장
+        //몬스터 죽음 저장      
+        EnemyDeathManager enemyDeathManager = GameObject.Find("EnemyDeathManager").GetComponent<EnemyDeathManager>();
+        GameObject.Find("EnemyDeathManager").GetComponent<EnemyDeathManager>().setNewEnemyDeath();
+        GameObject.Find("Player_Coin").GetComponent<Player_Coin>().setNowPlayerCoin();
 
+        //게임 플레이 횟수 저장
+        playgameCount.setPlaygameCount();
     }
 
     public void onClickBtn()

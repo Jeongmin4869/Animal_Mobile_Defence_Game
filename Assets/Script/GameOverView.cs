@@ -7,6 +7,7 @@ public class GameOverView : MonoBehaviour
 {
     public Text KillBossText;
     public Text KillEnemyText;
+    public PlaygameCount playgameCount = new PlaygameCount();
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class GameOverView : MonoBehaviour
         EnemyDeathManager enemyDeathManager= GameObject.Find("EnemyDeathManager").GetComponent<EnemyDeathManager>();
         GameObject.Find("EnemyDeathManager").GetComponent<EnemyDeathManager>().setNewEnemyDeath();
         GameObject.Find("Player_Coin").GetComponent<Player_Coin>().setNowPlayerCoin();
+        playgameCount.setPlaygameCount();
     }
 
 

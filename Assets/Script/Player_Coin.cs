@@ -17,7 +17,14 @@ public class Player_Coin : MonoBehaviour
     void Start()
     {
         coin_score = 10;
-        total_coin_score = 0;
+
+        total_coin_score = PlayerPrefs.GetInt("total_coin_score");
+        if (total_coin_score <= 0)
+        {
+            PlayerPrefs.SetInt("total_coin_score", 0);
+            PlayerPrefs.Save();
+        }
+
         coin_text_obj.text = "" + coin_score;
     }
 
@@ -43,6 +50,7 @@ public class Player_Coin : MonoBehaviour
             }
             var gameInfoJson = JsonConvert.SerializeObject(TestUGUI.gameInfo);//json을 storing형태로 저장.
             PlayerPrefs.SetString("game_info", gameInfoJson);
+            PlayerPrefs.SetInt("total_coin_score", total_coin_score);
             PlayerPrefs.Save();
         }
 

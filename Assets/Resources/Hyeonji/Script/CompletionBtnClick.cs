@@ -14,17 +14,9 @@ public class CompletionBtnClick : MonoBehaviour
     public static int AnimalNumber3;
     public Button CompletionBtn;
 
-
-    public static int GamePlayCount = 0; // 이 카운트는 게임 진짜 실행했을때 올리기... 
-
     private void Start()
     {
-        GamePlayCount = PlayerPrefs.GetInt("GamePlayCount");
-        if (GamePlayCount <= 0)
-        {
-            PlayerPrefs.SetInt("GamePlayCount", 0);
-            PlayerPrefs.Save();
-        }
+
     }
 
     public void Update()
@@ -43,12 +35,6 @@ public class CompletionBtnClick : MonoBehaviour
         AnimalNumber1 = AnimalNumberFX(SelectedBtn1.image.sprite.name);
         AnimalNumber2 = AnimalNumberFX(SelectedBtn2.image.sprite.name);
         AnimalNumber3 = AnimalNumberFX(SelectedBtn3.image.sprite.name);
-        Debug.Log("AnimalNumber : " + AnimalNumber1 + " " + AnimalNumber2 + " " +  AnimalNumber3);
-
-        //게임 실행할 경우 미션 해금을 위해 카운트 증가
-        GamePlayCount++;
-        PlayerPrefs.SetInt("GamePlayCount", GamePlayCount);
-        PlayerPrefs.Save(); // 저장
 
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("Game");
