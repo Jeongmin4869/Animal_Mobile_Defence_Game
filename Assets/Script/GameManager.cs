@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public float maxSpqwnDelay;
     public float curSpawnDelay; // 현재 흐르고 있는 시간
     public float bossSpawnDelay;
+    public float spawnSpeed = 0.7f;
     //public float playTime;
 
     public int playerPoint;
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
                 spawnCount++;
                 if (spawnCount % 3 == 0)
                 {
-                    if (maxSpqwnDelay >= 0.7f)
+                    if (maxSpqwnDelay >= spawnSpeed)
                     {
                         maxSpqwnDelay -= 0.1f;
                     }

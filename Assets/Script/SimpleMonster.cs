@@ -8,8 +8,14 @@ using UnityEngine.UI;
 public class SimpleMonster : MonoBehaviour
 {
 
-    public float speed; // 스피드
+    public float speed; // 스피드 //
     public int health; // 체력
+
+    public int plusMonsterHP = 2;
+    public int plusBossHP = 10;
+    public int plusFinalBossHP = 50;
+
+
     public int enemy_point;
     public Sprite[] sprites; //평소이미지, 데미지를 입었을때의 이미지
     public Text enemeyHealth;
@@ -193,30 +199,30 @@ public class SimpleMonster : MonoBehaviour
     public void Set_enemeyHealth()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        health += gameManager.Enemy_HP * 2;
-        if (health >= 100000)
+        health += gameManager.Enemy_HP * plusMonsterHP;
+        if (health >= 200000)
         {
-            health = 100000;
+            health = 200000;
         }
     }
 
     public void Set_BossEnemeyHealth()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        health += gameManager.Enemy_HP * 10;
-        if(health >= 100000)
+        health += gameManager.Enemy_HP * plusBossHP;
+        if(health >= 200000)
         {
-            health = 100000;
+            health = 200000;
         }
     }
 
     public void Set_FinalBossEnemeyHealth()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        health += gameManager.Enemy_HP * 50;
-        if (health >= 200000)
+        health += gameManager.Enemy_HP * plusFinalBossHP;
+        if (health >= 300000)
         {
-            health = 200000;
+            health = 300000;
         }
     }
 
