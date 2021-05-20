@@ -1,23 +1,23 @@
 [
   {
     "stage_id": "0",
-    "left_star": "50",
-    "right_star": "100",
-    "center_star": "150",
-    "sprite_name": "name"
+    "spawnSpeed": "0.7",
+    "plusMonsterHP": "2",
+    "plusBossHP": "10",
+    "plusFinalBossHP": "50"
   },
   {
     "stage_id": "1",
-    "left_star": "70",
-    "right_star": "120",
-    "center_star": "170",
-    "sprite_name": "name"
+    "spawnSpeed": "0.6",
+    "plusMonsterHP": "4",
+    "plusBossHP": "20",
+    "plusFinalBossHP": "60"
   },
   {
     "stage_id": "2",
-    "left_star": "90",
-    "right_star": "140",
-    "center_star": "190",
-    "sprite_name": "name"
+    "spawnSpeed": "0.5",
+    "plusMonsterHP": "6",
+    "plusBossHP": "30",
+    "plusFinalBossHP": "70"
   }
 ]

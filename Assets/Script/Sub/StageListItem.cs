@@ -12,7 +12,7 @@ public class StageListItem : MonoBehaviour
     public GameObject centerStar;
     public Button StageButton;
     public Text stageText;
-    public Image StageImage;
+    public GameObject[] StageImage;
 
     public string stageStar_tx;
     public int starCount;
@@ -20,7 +20,7 @@ public class StageListItem : MonoBehaviour
     {
 
         stageText.text = "Stage " + (id + 1);
-        
+        StageImage[id].SetActive(true);
 
         //캡술화 하기
         if (PlayerPrefs.GetInt("unlockStage")   >= id)

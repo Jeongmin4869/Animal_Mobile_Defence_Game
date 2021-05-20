@@ -26,8 +26,17 @@ public class SimpleMonster : MonoBehaviour
     GameManager gameManager;
     //public string coin_string;
 
-    private void Awake() //초기화
+    private void Start() //초기화
     {
+
+        var stageLevel = PlayerPrefs.GetInt("StageLevel");
+        plusMonsterHP = 2 + stageLevel * 2;
+        plusBossHP = 10 + stageLevel * 10;
+        plusFinalBossHP = 50 + stageLevel * 10;
+
+        Debug.Log("plusMonsterHP : " + plusMonsterHP +
+            " , plusBossHP : " + plusBossHP + ", plusFinalBossHP : " + plusFinalBossHP);
+
         //if (GameObject.Find("Boss_Enemy").GetComponent<BossMonster>())
         //    Set_BossEnemeyHealth();
         //else 
@@ -47,10 +56,7 @@ public class SimpleMonster : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
         rigid.velocity = Vector2.down * speed; // 속력 조절. 2D이기대문에 Vector2
-    }
-
-    void Start()
-    {
+    
         animalAdd = GameObject.Find("AnimalAdd").GetComponent<AnimalAdd>();
         playerHP = GameObject.Find("PlayerHP").GetComponent<PlayerHP>();
         

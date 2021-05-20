@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -29,11 +30,15 @@ public class GameManager : MonoBehaviour
     public bool callEnemy = true;
 
     public GameObject clearView;
+    public GameObject[] stageImage;
 
     //public Text Coin_score;//Coin의 점수
 
-    private void Awake()
+    private void Start()
     {
+        var stageLevel = PlayerPrefs.GetInt("StageLevel");
+        spawnSpeed = 0.8f - stageLevel * 0.1f; // 
+        stageImage[stageLevel].SetActive(true);
         Enemy_HP = 0;
         curSpawnDelay = 0;
     }
