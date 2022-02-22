@@ -1,4 +1,4 @@
-# Animal Defence Mobile Game
+# Animal Mobile Defence Game
 
 Unity를 사용해 개발한 모바일 디펜스 게임입니다.<p>
 
