@@ -13,15 +13,11 @@ public class AnimalArr
         animalArrayString = PlayerPrefs.GetString("AnimalArray");
         if (animalArrayString == "")
         {
-            //처음 동물은 parrot,penguin,pig 3마리.
-            Debug.Log(null);
             animalArrayString = "parrot,snake,pig,dog,hippo";
             PlayerPrefs.SetString("AnimalArray", animalArrayString);
             PlayerPrefs.Save();
         }
         AnimalArray = animalArrayString.Split(',');
-        Debug.Log(animalArrayString);
-        Debug.Log(AnimalArray[AnimalArray.Length-1]); 
     }
 
 

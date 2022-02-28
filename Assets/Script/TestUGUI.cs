@@ -105,9 +105,8 @@ public class TestUGUI : MonoBehaviour
     }
 
     // 클릭이벤트
-    private void Claim(int id) // 인덱스 오류 ArgumentNullException: Value cannot be null.Parameter name: source
+    private void Claim(int id)
     {
-
         var missionData = DataManager.GetInstance().GetData<MissionData>(id);
         var foundMissionInfo = TestUGUI.gameInfo.missionInfos.Find(x => x.id == id);
 
@@ -119,7 +118,6 @@ public class TestUGUI : MonoBehaviour
                 var foundListItem = missionListItems.Find(x => x.id == foundMissionInfo.id);
                 if (foundListItem != null)
                 {
-                    //여기까진 잘 돌아감
                     //GameObject.Find("UnlockAnimalView").GetComponent<UnlockAnimalView>().setImageAndText(id);
                     GameObject.Find("U_Animal_P").transform.Find("UnlockAnimalView").gameObject.SetActive(true);// UnlockAnimalView 를 active
                     GameObject.Find("UnlockAnimalView").GetComponent<UnlockAnimalView>().setImageAndText(id);
@@ -139,16 +137,14 @@ public class TestUGUI : MonoBehaviour
     //버튼상태설정
     private void setMissionBtnState(int index)
     {
-        //var missionData = DataManager.GetInstance().GetData<MissionData>(id);//리스트에서 클릭한것.
         var foundMissionInfo = TestUGUI.gameInfo.missionInfos.Find(x => x.id == index); // id가 i인것을 찾음.
         if (foundMissionInfo != null)
         {
             if (foundMissionInfo.clickedBtn == true)
             {
-                //해당 리스트 아이템의 버튼 상태를 바꿔준다.
+
                 var foundListIten = missionListItems.Find(x => x.id == foundMissionInfo.id);
-                //int index = TestUGUI.gameInfo.missionInfos.FindIndex(x => x.id == foundListIten.id);
-                //foundListIten = missionListItems.Find(x => x.id == index);
+
                 if (foundListIten != null)
                 {
                     Debug.LogFormat("{0} {1}", index, foundListIten);

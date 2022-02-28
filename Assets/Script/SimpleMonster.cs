@@ -34,12 +34,6 @@ public class SimpleMonster : MonoBehaviour
         plusBossHP = 10 + stageLevel * 10;
         plusFinalBossHP = 50 + stageLevel * 10;
 
-        Debug.Log("plusMonsterHP : " + plusMonsterHP +
-            " , plusBossHP : " + plusBossHP + ", plusFinalBossHP : " + plusFinalBossHP);
-
-        //if (GameObject.Find("Boss_Enemy").GetComponent<BossMonster>())
-        //    Set_BossEnemeyHealth();
-        //else 
         if (gameObject.tag == "Boss")
         {
             Set_BossEnemeyHealth();

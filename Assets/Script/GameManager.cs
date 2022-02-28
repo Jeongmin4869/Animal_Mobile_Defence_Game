@@ -47,15 +47,12 @@ public class GameManager : MonoBehaviour
     {
         curSpawnDelay += Time.deltaTime;
         bossSpawnDelay += Time.deltaTime;
-        //playTime += Time.deltaTime;
         if (callEnemy)
         {
             //적 스폰 시간
             if (curSpawnDelay > maxSpqwnDelay)
             {
                 spawnEnemy();
-                //maxSpqwnDelay = Random.Range(0.5f, 3f); // 랜덤시간으로 생성.
-
                 curSpawnDelay = 0;
                 spawnCount++;
                 if (spawnCount % 3 == 0)

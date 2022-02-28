@@ -22,25 +22,12 @@ public class MissionListItem : MonoBehaviour
     public void Init(int id, string missionSpriteName, string missionName,string animalName, int goalVal,int doingVal = 0)
     {
         this.id = id;
-        //this.iconMission.sprite = AssetManager.Instance.atlas.GetSprite(missionSpriteName);
-        this.txtMissionName.text = missionName;//string.Format("", missionName);
+        this.txtMissionName.text = missionName;
         this.animalName.text = string.Format("도전과제를 성공해 {0} 해금하기", animalName);
         if (doingVal >= goalVal)
         {
             this.binderCliam.ChangeState(UIBinder_BtnCliam.eBtnState.Active);
         }
-
-        /*
-        if(doingVal > 0)
-        {
-            var per = (float)doingVal / (float)goalVal;
-            slider.value = per;
-        }
-        else
-        {
-            slider.value = 0;
-        }
-        */
     }
 
     public void Click_UnlockBtn()
